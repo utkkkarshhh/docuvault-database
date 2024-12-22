@@ -13,10 +13,12 @@ const PublicVisibility = (sequelize) => {
       public_visibility: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
+        defaultValue: false,
       },
       public_password: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
+        defaultValue: null
       },
       user_id: {
         type: DataTypes.UUID,
