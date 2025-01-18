@@ -11,12 +11,7 @@ const sequelize = new Sequelize(
       host: envConfig.host,
       dialect: envConfig.dialect,
       port: envConfig.port,
-      dialectOptions: {
-        ssl: {
-          require: true,
-          rejectUnauthorized: false,
-        },
-      },
+      dialectOptions: envConfig.dialectOptions
     }
   );
 
