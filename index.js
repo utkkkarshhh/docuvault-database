@@ -2,6 +2,11 @@ const { Sequelize } = require("sequelize");
 const config = require("./config/config");
 const environment = process.env.NODE_ENV || "development";
 const envConfig = config[environment];
+try {
+  require('pg');
+} catch (e) {
+  throw new Error('Failed to load pg module: ' + e.message);
+}
 
 const sequelize = new Sequelize(
     envConfig.database,
