@@ -25,6 +25,7 @@ const publicVisibility = require("./models/publicVisibility")(sequelize);
 const userDetail = require("./models/userDetail")(sequelize);
 const userLimit = require("./models/userLimit")(sequelize);
 const userLogin = require("./models/userLogin")(sequelize);
+const conversion = require("./models/conversion")(sequelize);
 
 module.exports = {
   sequelize,
@@ -34,5 +35,6 @@ module.exports = {
     userDetail,
     userLimit,
     userLogin,
+    conversion
   },
 };
