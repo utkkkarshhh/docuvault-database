@@ -19,10 +19,7 @@ const Document = (sequelize) => {
       },
       description: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-        },
+        allowNull: true,
       },
       type: {
         type: DataTypes.STRING,
