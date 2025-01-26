@@ -27,6 +27,10 @@ const UserLogin = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      is_subscribed_to_emails: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+      },
     },
     {
       tableName: "user_login",
