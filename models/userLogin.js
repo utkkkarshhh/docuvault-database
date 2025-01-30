@@ -30,6 +30,7 @@ const UserLogin = (sequelize) => {
       is_subscribed_to_emails: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
+        allowNull: false,
       },
     },
     {
