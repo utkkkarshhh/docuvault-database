@@ -10,12 +10,16 @@ const Document = (sequelize) => {
         primaryKey: true,
         allowNull: false,
       },
-      name: {
+      unique_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notEmpty: true,
         },
+      },
+      upload_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       description: {
         type: DataTypes.STRING,
@@ -46,6 +50,9 @@ const Document = (sequelize) => {
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
       },
+    },
+    {
+      indexes: [{ unique: true, fields: ["upload_name"] }],
     },
     {
       tableName: "document",
