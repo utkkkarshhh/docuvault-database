@@ -3,11 +3,6 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.addColumn("user_login", "is_subscribed_to_emails", {
-      type: Sequelize.BOOLEAN,
-      defaultValue: true,
-      allowNull: false,
-    });
 
     await queryInterface.createTable("deleted_users", {
       id: {

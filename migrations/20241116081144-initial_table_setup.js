@@ -26,6 +26,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      is_subscribed_to_emails: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true,
+        allowNull: false,
+      },
       created_at: Sequelize.DATE,
       updated_at: Sequelize.DATE,
     });
