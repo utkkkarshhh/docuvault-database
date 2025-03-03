@@ -10,8 +10,8 @@ const generateMigration = (name) => {
   }
 
   const now = new Date();
-  const timestamp = now.toISOString().split("T")[0];
-  const filename = `${name}_${(timestamp)}.js`;
+  const timestamp = now.toISOString()[0];
+  const filename = `${(timestamp)}_${name}.js`;
 
   const migrationPath = path.join(migrationsDir, filename);
   exec(

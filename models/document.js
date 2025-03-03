@@ -52,13 +52,11 @@ const Document = (sequelize) => {
       },
     },
     {
-      indexes: [{ unique: true, fields: ["upload_name"] }],
-    },
-    {
       tableName: "document",
       timestamps: true,
       updatedAt: "updated_at",
       createdAt: "created_at",
+      indexes: [{ unique: true, fields: ["upload_name"] }],
     }
   );
 };
